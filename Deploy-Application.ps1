@@ -69,15 +69,15 @@ Try {
     ##* VARIABLE DECLARATION
     ##*===============================================
     ## Variables: Application
-    [string]$appVendor = ''
-    [string]$appName = ''
-    [string]$appVersion = ''
-    [string]$appArch = ''
+    [string]$appVendor = 'Pasco'
+    [string]$appName = 'Capstone'
+    [string]$appVersion = '2.5.2.3'
+    [string]$appArch = 'x64'
     [string]$appLang = 'EN'
     [string]$appRevision = '01'
     [string]$appScriptVersion = '1.0.0'
-    [string]$appScriptDate = 'XX/XX/20XX'
-    [string]$appScriptAuthor = '<author name>'
+    [string]$appScriptDate = '03/27/2023'
+    [string]$appScriptAuthor = 'Sebastian Bickford'
     ##*===============================================
     ## Variables: Install Titles (Only set here to override defaults set by the toolkit)
     [string]$installName = ''
@@ -168,7 +168,8 @@ Try {
         }
 
         ## <Perform Installation tasks here>
-
+        $arguments = "/s /v`"/qn LICENCEKEY=19f5d-h90o1-4c1b1-hcior-50ra2-cce33 DISABLE_SOFTWARE_UPDATES=1`""
+		Execute-Process -Path "$dirFiles\PASCO_Capstone-2.5.2.3-x64.exe" -Parameters $arguments
 
         ##*===============================================
         ##* POST-INSTALLATION
@@ -276,8 +277,8 @@ Catch {
 # SIG # Begin signature block
 # MIImVgYJKoZIhvcNAQcCoIImRzCCJkMCAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
-# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCDB5bVOvQ4Dzmdk
-# 6vQ9QovPG3aaImGnocZ2/tj4T8IQ76CCH8EwggVvMIIEV6ADAgECAhBI/JO0YFWU
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCAh4HP0on1n0QNp
+# GSi7MlDFRj+xR9sbwUYPBvPw+raj+qCCH8EwggVvMIIEV6ADAgECAhBI/JO0YFWU
 # jTanyYqJ1pQWMA0GCSqGSIb3DQEBDAUAMHsxCzAJBgNVBAYTAkdCMRswGQYDVQQI
 # DBJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcMB1NhbGZvcmQxGjAYBgNVBAoM
 # EUNvbW9kbyBDQSBMaW1pdGVkMSEwHwYDVQQDDBhBQUEgQ2VydGlmaWNhdGUgU2Vy
@@ -451,32 +452,32 @@ Catch {
 # ZDErMCkGA1UEAxMiU2VjdGlnbyBQdWJsaWMgQ29kZSBTaWduaW5nIENBIFIzNgIR
 # AKVN33D73PFMVIK48rFyyjEwDQYJYIZIAWUDBAIBBQCggYQwGAYKKwYBBAGCNwIB
 # DDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEE
-# AYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgCa2HQFWNLLms
-# wN/zb4VOu3Yn59RhVAMeQieQfz7FBEUwDQYJKoZIhvcNAQEBBQAEggGAKffqb2e1
-# CR2o3GmN8lQ51rkHtwHTyWoRoPtJ48dC3WkLKWG7vHX81T7NQ0ol16Y/D9l/ZK0e
-# 2uLGBhhv9vqIQ10OLVUS3wo/6kcyPfmN120T6HzPB/SXy7pkFV0ZCuvuUnBKK5FY
-# qGvBAZ2V5BPWhbK8YTsB0RSmUYDpF89fii8jpSgqn8YXhg8CVgSwqJGtPH98WMK9
-# v3bJWhKuVVkueNB+JfOvsayA6ZAepdT+V1kUS18uRRS5MQz7DEI9798XmYNNbAT9
-# KSd3re1u/ShfriLqyYU5zoix+bUjZC7C/7duPzxOk8m40PfWNlZFNHmXD/feHAZ1
-# R/fZF6D/oqR0No6UX+8Nz37Fw55nwi6pYf6nF0OIAKYnq7NN0hWcP1itHd5LBsy/
-# qij7TfN6olNdVvYyB5WsxLAxl54oNVMuNvXq7crg/frjky4G5usVZhxwL0BPtP7K
-# aQpgJEfuggci3TsyDyRASLN9OGWN0MwuvYuHGQ6gThv+xN9b4MAw1zpeoYIDTDCC
+# AYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgqXUIHoTZLEOx
+# gah+vrFRFM653tHIv+/sygh1BV4oMcowDQYJKoZIhvcNAQEBBQAEggGAR1xTcyCz
+# 9zlONnX7eiih2zSxFVrP6k7L+NUaMNz9dWhQqE7kyY0QX2hxfQhkf3DhcK1p5dUw
+# B3HBQRDBKZO2ThGLhyDZFu/ao07hdPlVdP6H9tf1X4KjHofrhhI2wxB4laPxZwae
+# iYoLPdRXPqYUkvSGrI7IQjZ7QRAWJ4CHgiZAZ85GSEXPDT0vVBrJrImhzkUwTiiC
+# /cnDx0PHpPOgmbY9mXmzMRC9XmLjF4VcD3eY81wOJ6zPpUMEK256gduc1xxtaIEY
+# rjGDwLUgdgdGgQpKZRrhq5lLqinv57qDvnN2sswyzvWxlphWapskK9LoHV4Scxic
+# Pp+tQaBNn2wX/Q+YAj2VFecI1MXmn23NwYyV18mJ+EESdhRgwQ4+okbPUyj103HS
+# KDadOTY7KqU7oUzLLUHletR8i7u92IjsbEmXPQQdlc3bHU+2Tws/GZtLgDwaESxz
+# eIP0gqRMCdeYAlgsH8ir3w4aI7c4r+rrb0Uk//Ip2iw/TOw78VabFL7ToYIDTDCC
 # A0gGCSqGSIb3DQEJBjGCAzkwggM1AgEBMIGSMH0xCzAJBgNVBAYTAkdCMRswGQYD
 # VQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGDAWBgNV
 # BAoTD1NlY3RpZ28gTGltaXRlZDElMCMGA1UEAxMcU2VjdGlnbyBSU0EgVGltZSBT
 # dGFtcGluZyBDQQIRAJA5f5rSSjoT8r2RXwg4qUMwDQYJYIZIAWUDBAICBQCgeTAY
-# BgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yMzAzMjQy
-# MDI1NTNaMD8GCSqGSIb3DQEJBDEyBDDGWbI0eBXjLaF85xjgP9PFzCMkuJ0ctGfj
-# tlNAHaKu/8PJs1121T8MPYvxsfx88ecwDQYJKoZIhvcNAQEBBQAEggIAGr9ayfRu
-# vScwWLgcPB6U55J/SQEFHIxIppYAz/9HqCi3Y+PzU5oNYX2OI8WPh0NwYl+xKfIG
-# f2Lhw2LaGIVVPvRWcBmOpWt5k4KFbDX+nhQeDYUUIOwvCZkhUsq+PX0aBzT/CiGD
-# sGvs9S/j/OqSZLCM9563ScE166/KvPLzFpDARTfIHlvP0/pxwbwzD3+7QztbLxGr
-# PVlMLmHiLi++u73JxUrPEmJPV5734GvlkU4hvH8UQdXgyv9pzcnHrXhhfx4RBPe8
-# XbxlrslW2MdjkTKVnZvKF1yCPVOg3so7dvw30eS+wLCABrY136PpXsIx9lvyPcXF
-# m8NgmWWj2+isxx/uzj/BGKZViQuYVEkdzeL+CXF4nIfpr1JjD2EVae39Uyigrthg
-# 59cNYASpwwsEHlQkWsSFbxOBRalCA7V3fYiMiMspaF5wZaFTSCeW7VljUxNavS9u
-# 9RmQKLx4L83TyxeDAkxGp7LZJbzJ669IWBb8ujN0VIIzj5YoaEHQpd71xHVe8UuF
-# X4w0RacQOh7YSjj04n+IfNCZbUFmUXBvm4shuclSDcx9T66kr8vBHPWUXHMLGWnG
-# ymvdUEx8DVG3FsQ8yPEvGwnqwWFtLc6isHNoO8Qp8liZ0M6Ji544Enh6Ci2eBNQr
-# zw5EJQ+iLmVgrLvZH2D5akYkJd7QJDfnLDI=
+# BgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yMzAzMjcy
+# MzAwMjVaMD8GCSqGSIb3DQEJBDEyBDAMOBKtw1Em4TKQjxFCtvKqeEh9v1oPo190
+# EMFSnQ+08SvjscbX2J9Cu6cxy3f9CQwwDQYJKoZIhvcNAQEBBQAEggIAS3Qi5Vg/
+# AV6ERY64CoGMHHDps6fTzo+UIsSgivvUdnyZ8ggE6DPXmDk8MmBN0FyIAodixOLQ
+# i612cqlxYabcgexFk1frnAiBudzjS6Xha3sD0H/ujD7RWGz1L/rY0Ji6BzLulQfk
+# Zo6ZpZe/QJfpZ4cLIDQp7rw3JQkKZqNj1abjDVS/MWlgidXwWVWSTuNFsYI4l52/
+# TLKbQ5/BcIbuFfBVI889uJK6szV8Opg4pOiTzP4+4MpHlRYoAtFUxyIxz4vWHsAi
+# UkljbVu851Is5xfdMwzQynhvrZd/hOiGejJHMLP8Ea/bgqENnxIUbVpETSFTJIYM
+# APyZkRSiSPXhFU9xvbJbYFB30tQbDCBpyuXkspC/iT4013Axwz+jjCzm13DH1s6c
+# a72QrkHbH9vuOjLgnNYqsWEQYiW63hS16QzyeD84xxCPxyntvCZv0uPSCfXmpINk
+# ta1ohdWDsjP+3UshcodqcO0Gdvj4lQbr3I63lovvdIPjOl2fxJszyQD9q/z3K2Ek
+# zY9h2LsP0Ddr2rJhkYsW4FBhJp+Pam0dBNkD227ZMTzkSqQeoAqLqZHhEflKMWJ7
+# ZZgQynrYyrKQPIc833YEy+W6H2IXPmtTtEYSOFnOPUqJQQcVNeZCqUvjkdSW6jwA
+# u7WQV0ahbepPJATbSd0ePed+eIvYqBUH7T4=
 # SIG # End signature block
